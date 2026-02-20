@@ -1,14 +1,91 @@
 import { PageContainer } from "@/components/layout/page-container";
 import { Logo } from "@/components/ui/logo";
 
+const footerColumns = [
+  {
+    title: "Company",
+    links: [
+      { label: "Features", href: "/features" },
+      { label: "About", href: "/about" },
+      { label: "Plans", href: "/plans" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    title: "Services",
+    links: [
+      { label: "Client Profiles", href: "/features#profiles" },
+      { label: "Workout Builder", href: "/features#builder" },
+      { label: "Progress Reports", href: "/features#progress" },
+      { label: "Team Coaching", href: "/features#team" },
+    ],
+  },
+  // {
+  //   title: "Resources",
+  //   links: [
+  //     { label: "Help Center", href: "/help" },
+  //     { label: "Success Stories", href: "/stories" },
+  //   ],
+  // },
+];
+
 export function SiteFooter() {
   return (
-    <footer id="about" className="border-t border-slate-200 bg-white py-10">
-      <PageContainer className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-        <Logo full={false} />
-        <p className="text-sm text-slate-500">
-          © {new Date().getFullYear()} Body Fusion. All rights reserved.
-        </p>
+    <footer id="about" className="bg-white pb-8 pt-16">
+      <PageContainer>
+        <div className="mb-16 text-center">
+          <h3 className="mb-4 text-lg font-medium text-slate-900">
+            Get product updates and practical tips for growing your coaching
+            business.
+          </h3>
+          <form className="relative mx-auto flex w-full max-w-md">
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="w-full rounded-full border border-slate-200 bg-slate-50 py-4 pl-6 pr-32 outline-none transition-shadow focus:shadow-[0_0_0_3px_rgba(37,99,235,0.2)]"
+            />
+            <button
+              type="submit"
+              className="absolute bottom-1 right-1 top-1 rounded-full bg-[#FFA500] px-6 text-sm font-bold text-slate-950 hover:bg-[#e69500]"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+
+        <div className="mb-12 grid grid-cols-2 gap-y-8 border-t border-slate-200 pt-12 md:grid-cols-3 md:gap-x-12">
+          <div className="col-span-2 md:col-span-1">
+            <Logo full={false} />
+            <p className="mt-4 text-sm leading-relaxed text-slate-600">
+              Client management and workout programming software designed for
+              modern personal trainers.
+            </p>
+            <p className="mt-4 text-xs text-slate-500">
+              © Body Fusion {new Date().getFullYear()}
+            </p>
+          </div>
+          {footerColumns.map((column) => (
+            <div key={column.title}>
+              <h4 className="mb-4 text-sm font-bold uppercase tracking-wider text-slate-900">
+                {column.title}
+              </h4>
+              <ul className="space-y-2 text-sm text-slate-500">
+                {column.links.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      className="transition-colors hover:text-[#FFA500]"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="h-2 w-full bg-gradient-to-r from-amber-200 via-[#FFA500] to-amber-200" />
       </PageContainer>
     </footer>
   );

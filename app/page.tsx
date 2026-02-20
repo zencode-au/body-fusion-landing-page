@@ -1,8 +1,8 @@
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
+import { CtaSection } from "@/components/sections/cta-section";
 import { FeaturesSection } from "@/components/sections/features-section";
 import { HeroSection } from "@/components/sections/hero-section";
-import { ShowcaseSection } from "@/components/sections/showcase-section";
 
 export default function Home() {
   return (
@@ -11,7 +11,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <FeaturesSection />
-        <ShowcaseSection />
+        <CtaSection />
       </main>
       <SiteFooter />
     </div>

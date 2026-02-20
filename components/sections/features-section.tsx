@@ -2,39 +2,58 @@ import { PageContainer } from "@/components/layout/page-container";
 
 const features = [
   {
-    title: "Smart plans",
+    title: "Client Profiles",
     description:
-      "Adaptive workout and nutrition recommendations based on each user's progress.",
+      "Keep goals, readiness, preferences, and check-ins organized in one place.",
   },
   {
-    title: "Coach visibility",
+    title: "Workout Builder",
     description:
-      "A clear dashboard to monitor performance, streaks, and weekly adherence.",
+      "Create and reuse periodized plans quickly with a clean coaching workflow.",
   },
   {
-    title: "Cross-platform",
+    title: "Progress Tracking",
     description:
-      "A seamless experience across mobile and web so users can stay consistent anywhere.",
+      "Monitor strength trends and adherence with practical dashboards clients understand.",
+  },
+  {
+    title: "Habit Visibility",
+    description:
+      "Track consistency and weekly behavior patterns that impact transformation outcomes.",
+  },
+  {
+    title: "Team Collaboration",
+    description:
+      "Coordinate with assistant coaches while keeping communication and ownership clear.",
+  },
+  {
+    title: "Modern Delivery",
+    description:
+      "Offer a seamless web and mobile experience that feels premium to every client.",
   },
 ];
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="py-16 lg:py-24">
+    <section id="features" className="py-20 lg:py-24">
       <PageContainer>
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
-            Built for lasting results
+          <span className="animate-fade-up text-sm font-bold uppercase tracking-[0.16em] text-[#FFA500]">
+            Built for Coaches
+          </span>
+          <h2 className="animate-fade-up delay-100 text-3xl font-bold tracking-tight text-slate-950 md:text-4xl">
+            Everything needed to run a high-performance coaching business
           </h2>
-          <p className="mt-4 text-slate-600">
-            A modular product experience designed for coaches and clients.
+          <p className="animate-fade-up delay-200 mt-4 text-slate-600">
+            Designed for speed, consistency, and measurable outcomes.
           </p>
         </div>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {features.map((feature) => (
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature, index) => (
             <article
               key={feature.title}
-              className="rounded-2xl border border-slate-200 bg-white p-6"
+              style={{ animationDelay: `${index * 70 + 120}ms` }}
+              className="animate-fade-up rounded-2xl border border-slate-200 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#FFA500]/40 hover:shadow-xl"
             >
               <h3 className="text-lg font-semibold text-slate-900">
                 {feature.title}

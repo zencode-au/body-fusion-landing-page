@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Body Fusion Landing Page
 
-## Getting Started
+Static marketing website for **Body Fusion**, built with **Next.js 16 (App Router)** and **Tailwind CSS v4**.
 
-First, run the development server:
+The project is structured to make UI sections reusable and easy to extend as new landing page blocks are added from design/HTML references.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## What this repository contains
+
+- A componentized landing page implementation in Next.js.
+- Reusable UI building blocks (`components/ui`, `components/layout`, `components/sections`).
+- Ready-to-use brand/media assets in `public/assets` (logo, store buttons, app/web screenshots).
+- Code quality setup with **Biome**.
+- Commit message enforcement with **Commitlint + Husky** (Conventional Commits).
+
+## Tech stack
+
+- `next@16`
+- `react@19`
+- `tailwindcss@4`
+- `typescript`
+- `@biomejs/biome`
+- `@commitlint/cli` + `@commitlint/config-conventional`
+- `husky`
+- Package manager: `yarn@4`
+
+## Project structure
+
+```text
+app/
+  layout.tsx
+  page.tsx
+  globals.css
+components/
+  layout/
+  sections/
+  ui/
+public/
+  assets/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Prerequisites
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Node.js 20+
+- Corepack enabled (`corepack enable`)
+- Yarn 4 (provided via `packageManager`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Getting started
 
-## Learn More
+1. Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Start development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+yarn dev
+```
 
-## Deploy on Vercel
+3. Open:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```text
+http://localhost:3000
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Available scripts
+
+- `yarn dev`: run local development server
+- `yarn build`: create production build
+- `yarn start`: run production server
+- `yarn lint`: run Biome checks
+- `yarn lint:fix`: run Biome checks and apply fixes
+- `yarn format`: format files with Biome
+- `yarn format:check`: check formatting without writing changes
+- `yarn prepare`: install Husky hooks
+
+## Code quality
+
+### Linting and formatting
+
+This repo uses **Biome** only (ESLint has been removed).
+
+Run before opening a PR:
+
+```bash
+yarn lint
+yarn format:check
+```
+
+### Conventional commits
+
+Commit messages are enforced by Commitlint through a Husky `commit-msg` hook.
+
+Examples:
+
+- `feat: add hero section CTA`
+- `fix: correct store button spacing on mobile`
+- `chore: update dependencies`
+
+## Working with landing page sections
+
+- Keep sections componentized and reusable.
+- Prefer composing from `components/sections` + shared primitives in `components/ui` and `components/layout`.
+- Use Next.js best practices for static pages:
+  - Keep components server-first unless client interactivity is needed.
+  - Use `next/image` for image assets in `public/assets`.
+  - Keep styling in Tailwind utility classes.
+
+## Notes
+
+- Assets used by the landing page are already available at `public/assets`.
+- If hooks are not active in your local clone, run:
+
+```bash
+yarn prepare
+```

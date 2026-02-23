@@ -1,4 +1,5 @@
 import { PageContainer } from "@/components/layout/page-container";
+import { SubscribeForm } from "@/components/sections/subscribe-form";
 import { Logo } from "@/components/ui/logo";
 
 const footerColumns = [
@@ -6,20 +7,18 @@ const footerColumns = [
     title: "Company",
     links: [
       { label: "Features", href: "/features" },
-      { label: "About", href: "/about" },
       { label: "Plans", href: "/plans" },
       { label: "Contact", href: "/contact" },
     ],
   },
-  {
-    title: "Services",
-    links: [
-      { label: "Client Profiles", href: "/features#profiles" },
-      { label: "Workout Builder", href: "/features#builder" },
-      { label: "Progress Reports", href: "/features#progress" },
-      { label: "Team Coaching", href: "/features#team" },
-    ],
-  },
+  // {
+  //   title: "Services",
+  //   links: [
+  //     { label: "Workout Builder", href: "/features#builder" },
+  //     { label: "In-App Chat", href: "/features#chat" },
+  //     { label: "Client Profiles", href: "/features#profiles" },
+  //   ],
+  // },
   // {
   //   title: "Resources",
   //   links: [
@@ -38,22 +37,12 @@ export function SiteFooter() {
             Get product updates and practical tips for growing your coaching
             business.
           </h3>
-          <form className="relative mx-auto flex w-full max-w-md">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full rounded-full border border-slate-200 bg-slate-50 py-4 pl-6 pr-32 outline-none transition-shadow focus:shadow-[0_0_0_3px_rgba(37,99,235,0.2)]"
-            />
-            <button
-              type="submit"
-              className="absolute bottom-1 right-1 top-1 rounded-full bg-[#FFA500] px-6 text-sm font-bold text-slate-950 hover:bg-[#e69500]"
-            >
-              Subscribe
-            </button>
-          </form>
+          <div className="mx-auto max-w-md">
+            <SubscribeForm />
+          </div>
         </div>
 
-        <div className="mb-12 grid grid-cols-2 gap-y-8 border-t border-slate-200 pt-12 md:grid-cols-3 md:gap-x-12">
+        <div className="mb-12 grid grid-cols-2 gap-y-8 border-t border-slate-200 pt-12 md:gap-x-12">
           <div className="col-span-2 md:col-span-1">
             <Logo full={false} />
             <p className="mt-4 text-sm leading-relaxed text-slate-600">

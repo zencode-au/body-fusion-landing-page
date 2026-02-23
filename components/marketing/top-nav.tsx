@@ -2,7 +2,7 @@ import { PageContainer } from "@/components/layout/page-container";
 import { Logo } from "@/components/ui/logo";
 
 type TopNavProps = {
-  active: "about" | "plans" | "features" | "contact" | null;
+  active: "plans" | "features" | "contact" | null;
 };
 
 const navItems: Array<{
@@ -11,7 +11,6 @@ const navItems: Array<{
   href: string;
 }> = [
   { key: "features", label: "Features", href: "/features" },
-  { key: "about", label: "About", href: "/about" },
   { key: "plans", label: "Plans", href: "/plans" },
   { key: "contact", label: "Contact", href: "/contact" },
 ];

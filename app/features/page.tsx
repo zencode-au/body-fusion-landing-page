@@ -1,7 +1,5 @@
-import { FeaturesAnalytics } from "@/components/features/features-analytics";
-import { FeaturesGrid } from "@/components/features/features-grid";
 import { FeaturesHero } from "@/components/features/features-hero";
-import { FeaturesProgramming } from "@/components/features/features-programming";
+import { FeaturesShowcases } from "@/components/features/features-showcases";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { TopNav } from "@/components/marketing/top-nav";
 
@@ -11,9 +9,7 @@ export default function FeaturesPage() {
       <TopNav active="features" />
       <FeaturesHero />
       <main>
-        <FeaturesProgramming />
-        <FeaturesAnalytics />
-        <FeaturesGrid />
+        <FeaturesShowcases />
       </main>
       <SiteFooter />
     </div>

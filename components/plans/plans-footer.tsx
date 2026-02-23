@@ -3,7 +3,6 @@ import { Logo } from "@/components/ui/logo";
 
 const links = [
   { label: "Features", href: "/features" },
-  { label: "About", href: "/about" },
   { label: "Plans", href: "/plans" },
   { label: "Contact", href: "/contact" },
 ];

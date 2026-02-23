@@ -37,7 +37,7 @@ export function ContactContent({ status }: ContactContentProps) {
   return (
     <section className="py-24">
       <PageContainer>
-        <div className="mb-12 grid gap-6 md:grid-cols-2">
+        <div className="mb-6 grid gap-6 md:grid-cols-2">
           {channels.map((channel) => (
             <article key={channel.title} className={cardClass}>
               <h2 className="text-lg font-bold text-slate-900">

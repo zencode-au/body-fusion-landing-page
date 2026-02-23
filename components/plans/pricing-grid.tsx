@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef } from "react";
 import type { BillingCycle } from "@/components/plans/pricing-hero";
+import { useRef } from "react";
 
 type Plan = {
   name: string;
@@ -124,41 +124,46 @@ export function PricingGrid({ billingCycle }: PricingGridProps) {
 
   return (
     <section>
-      <div className="mb-6 flex items-center justify-end gap-3">
-        <button
-          type="button"
-          aria-label="Previous plan"
-          onClick={() => scrollPlans("left")}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 transition-colors hover:border-[#FFA500] hover:text-[#FFA500]"
-        >
-          <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
-            <path
-              d="M15 6 9 12l6 6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-        <button
-          type="button"
-          aria-label="Next plan"
-          onClick={() => scrollPlans("right")}
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 transition-colors hover:border-[#FFA500] hover:text-[#FFA500]"
-        >
-          <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
-            <path
-              d="m9 6 6 6-6 6"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+      <div className="mb-6 flex items-center justify-end gap-4">
+        <p className="text-xs font-medium uppercase tracking-wide text-slate-500">
+          All prices in <span className="font-bold">AUD</span>
+        </p>
+        <div className="flex items-center gap-3">
+          <button
+            type="button"
+            aria-label="Previous plan"
+            onClick={() => scrollPlans("left")}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 transition-colors hover:border-[#FFA500] hover:text-[#FFA500]"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+              <path
+                d="M15 6 9 12l6 6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            type="button"
+            aria-label="Next plan"
+            onClick={() => scrollPlans("right")}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-300 bg-white text-slate-700 transition-colors hover:border-[#FFA500] hover:text-[#FFA500]"
+          >
+            <svg viewBox="0 0 24 24" className="h-5 w-5" aria-hidden="true">
+              <path
+                d="m9 6 6 6-6 6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
 
       <div
@@ -171,20 +176,19 @@ export function PricingGrid({ billingCycle }: PricingGridProps) {
           const savingsPercentage =
             plan.monthlyPrice > 0
               ? Math.round(
-                  ((plan.monthlyPrice - plan.yearlyPrice) / plan.monthlyPrice) *
-                    100,
-                )
+                ((plan.monthlyPrice - plan.yearlyPrice) / plan.monthlyPrice) *
+                100,
+              )
               : 0;
 
           return (
             <article
               key={plan.name}
               data-plan-card
-              className={`relative flex flex-col rounded-3xl border bg-white p-8 ${
-                plan.featured
+              className={`relative flex flex-col rounded-3xl border bg-white p-8 ${plan.featured
                   ? "z-10 min-w-[18.5rem] snap-start border-[#FFA500] bg-[#FFA500]/5 shadow-xl ring-2 ring-[#FFA500]/40 md:min-w-[20rem] lg:min-w-[22rem] xl:min-w-[23rem]"
                   : "min-w-[18.5rem] snap-start md:min-w-[20rem] lg:min-w-[22rem] xl:min-w-[23rem]"
-              } ${plan.featured ? "" : "border-slate-200 shadow-sm"}`}
+                } ${plan.featured ? "" : "border-slate-200 shadow-sm"}`}
             >
               {plan.featured ? (
                 <p className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[#FFA500] px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-950">
@@ -209,9 +213,6 @@ export function PricingGrid({ billingCycle }: PricingGridProps) {
                       <span className="text-slate-500">/mo</span>
                     </>
                   )}
-                </p>
-                <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
-                  All prices in <span className="font-bold">AUD</span>
                 </p>
                 {billingCycle === "yearly" ? (
                   <div className="mt-1 flex items-center gap-2">
@@ -249,11 +250,10 @@ export function PricingGrid({ billingCycle }: PricingGridProps) {
                     ? "/contact"
                     : "https://bodyfusion.app/#/coach/coachSignUpWebRoute"
                 }
-                className={`inline-flex h-14 w-full items-center justify-center rounded-2xl border-2 px-4 text-base font-bold transition-all ${
-                  plan.featured
+                className={`inline-flex h-14 w-full items-center justify-center rounded-2xl border-2 px-4 text-base font-bold transition-all ${plan.featured
                     ? "border-[#FFA500] bg-[#FFA500] text-slate-950 hover:bg-[#e69500]"
                     : "border-[#FFA500] text-slate-950 hover:bg-[#FFA500]/10"
-                }`}
+                  }`}
               >
                 {plan.cta}
               </a>

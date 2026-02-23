@@ -3,7 +3,6 @@ import { Logo } from "@/components/ui/logo";
 
 const navItems = [
   { label: "Features", href: "/features" },
-  { label: "About", href: "/about" },
   { label: "Plans", href: "/plans" },
   { label: "Contact", href: "/contact" },
 ];
@@ -29,7 +28,7 @@ export function SiteHeader() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <a
-            href="/login"
+            href="https://bodyfusion.app/#/login"
             className="text-sm font-medium text-slate-700 transition-colors hover:text-[#FFA500]"
           >
             Log in

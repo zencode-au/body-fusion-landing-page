@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { PageContainer } from "@/components/layout/page-container";
-import { StoreButtons } from "@/components/ui/store-buttons";
+import Image from "next/image";
 
 export function CtaSection() {
   return (
@@ -24,12 +23,12 @@ export function CtaSection() {
           </p>
           <div className="animate-fade-up delay-300 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
-              href="/signup"
+              href="https://bodyfusion.app/#/coach/coachSignUpWebRoute"
               className="rounded-full bg-[#FFA500] px-8 py-3 text-sm font-bold text-slate-950 transition-colors hover:bg-[#e69500]"
             >
               Create Coach Account
             </a>
-            <StoreButtons />
+            {/* <StoreButtons /> */}
           </div>
         </div>
 
@@ -41,17 +40,23 @@ export function CtaSection() {
                 alt="Body Fusion icon"
                 width={48}
                 height={48}
-                className="rounded-full bg-[#FFA500] p-2"
+                className="rounded-full bg-white p-2"
               />
               <div>
                 <p className="font-bold text-white">Body Fusion Pro</p>
                 <p className="text-sm text-white/60">Coach Edition</p>
               </div>
             </div>
-            <div className="space-y-3">
-              <div className="h-2 w-3/4 rounded-full bg-white/20" />
-              <div className="h-2 w-1/2 rounded-full bg-white/20" />
-              <div className="h-2 w-full rounded-full bg-white/20" />
+            <div className="space-y-3 text-sm">
+              <p className="rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-white/90">
+                AI reviews client feedback requests before you reply.
+              </p>
+              <p className="rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-white/90">
+                Approve or edit draft answers in one click.
+              </p>
+              <p className="rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-white/90">
+                Keep every conversation, session, and progress update in sync.
+              </p>
             </div>
           </div>
         </div>

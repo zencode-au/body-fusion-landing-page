@@ -53,16 +53,16 @@ export function AboutStory() {
               The Story Behind Body Fusion
             </h2>
             <p className="text-lg leading-relaxed text-slate-500">
-              In 2021, our founders were juggling three different apps, two
-              spreadsheets, and endless WhatsApp messages just to manage 15
-              clients. They realized that the coaching industry was being
-              underserved by generic fitness apps.
+              For years, we coached using apps that looked good in demos but
+              failed in real day-to-day work. Programming took too long, client
+              context was scattered, and communication lived across too many
+              tools.
             </p>
             <p className="text-lg leading-relaxed text-slate-500">
-              Body Fusion was born out of a desire to create a unified ecosystem
-              that respects the coach&apos;s workflow. We&apos;re now a team of
-              40 passionate engineers, designers, and strength coaches working
-              to define the future of athletic management.
+              So we built Body Fusion to replace that mess with one platform
+              that actually fits a coach&apos;s workflow: client profiles,
+              programming, feedback, messaging, and progress tracking in one
+              place.
             </p>
             <div className="pt-4">
               <a
@@ -80,8 +80,8 @@ export function AboutStory() {
               </div>
               <div className="absolute bottom-8 left-8 right-8 rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-xl">
                 <p className="font-bold italic text-white">
-                  &quot;We&apos;re building the tool we wish we had when we
-                  started our coaching careers.&quot;
+                  &quot;We spent years fighting bad software, so we built the
+                  platform we always wanted to coach with.&quot;
                 </p>
                 <p className="mt-2 text-sm text-white/60">
                   - Marcus Thorne, Founder

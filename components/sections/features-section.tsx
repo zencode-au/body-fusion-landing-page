@@ -22,9 +22,9 @@ const features = [
       "Track consistency and weekly behavior patterns that impact transformation outcomes.",
   },
   {
-    title: "Team Collaboration",
+    title: "In-App Chat",
     description:
-      "Coordinate with assistant coaches while keeping communication and ownership clear.",
+      "Message clients in real time, share updates fast, and keep all conversations in one place.",
   },
   {
     title: "Modern Delivery",
@@ -47,6 +47,12 @@ export function FeaturesSection() {
           <p className="animate-fade-up delay-200 mt-4 text-slate-600">
             Designed for speed, consistency, and measurable outcomes.
           </p>
+          <a
+            href="/features"
+            className="animate-fade-up delay-300 mt-6 inline-flex rounded-full bg-[#FFA500] px-6 py-2 text-sm font-semibold text-slate-950 transition-colors hover:bg-[#e69500]"
+          >
+            View All Features
+          </a>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => (

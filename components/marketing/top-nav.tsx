@@ -10,10 +10,10 @@ const navItems: Array<{
   label: string;
   href: string;
 }> = [
-  { key: "features", label: "Features", href: "/features" },
-  { key: "plans", label: "Plans", href: "/plans" },
-  { key: "contact", label: "Contact", href: "/contact" },
-];
+    { key: "features", label: "Features", href: "/features" },
+    { key: "plans", label: "Plans", href: "/plans" },
+    { key: "contact", label: "Contact", href: "/contact" },
+  ];
 
 export function TopNav({ active }: TopNavProps) {
   return (
@@ -46,7 +46,7 @@ export function TopNav({ active }: TopNavProps) {
             Log In
           </a>
           <a
-            href="https://bodyfusion.app/#/coach/coachSignUpWebRoute"
+            href="https://coach.bodyfusion.app/#/coach/coachSignUpWebRoute"
             className="rounded-full bg-[#FFA500] px-6 py-2 text-sm font-semibold text-slate-950 transition-colors hover:bg-[#e69500]"
           >
             Get Started

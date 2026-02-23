@@ -23,7 +23,7 @@ export function CtaSection() {
           </p>
           <div className="animate-fade-up delay-300 flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
-              href="https://bodyfusion.app/#/coach/coachSignUpWebRoute"
+              href="https://coach.bodyfusion.app/#/coach/coachSignUpWebRoute"
               className="rounded-full bg-[#FFA500] px-8 py-3 text-sm font-bold text-slate-950 transition-colors hover:bg-[#e69500]"
             >
               Create Coach Account

@@ -248,7 +248,7 @@ export function PricingGrid({ billingCycle }: PricingGridProps) {
                 href={
                   plan.name === "Enterprise"
                     ? "/contact"
-                    : "https://bodyfusion.app/#/coach/coachSignUpWebRoute"
+                    : "https://coach.bodyfusion.app/#/coach/coachSignUpWebRoute"
                 }
                 className={`inline-flex h-14 w-full items-center justify-center rounded-2xl border-2 px-4 text-base font-bold transition-all ${plan.featured
                     ? "border-[#FFA500] bg-[#FFA500] text-slate-950 hover:bg-[#e69500]"

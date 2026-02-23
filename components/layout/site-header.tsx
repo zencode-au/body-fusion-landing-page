@@ -28,13 +28,13 @@ export function SiteHeader() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <a
-            href="https://bodyfusion.app/#/login"
+            href="https://coach.bodyfusion.app/#/login"
             className="text-sm font-medium text-slate-700 transition-colors hover:text-[#FFA500]"
           >
             Log in
           </a>
           <a
-            href="https://bodyfusion.app/#/coach/coachSignUpWebRoute"
+            href="https://coach.bodyfusion.app/#/coach/coachSignUpWebRoute"
             className="rounded-full bg-[#FFA500] px-6 py-2 text-sm font-semibold text-slate-950 transition-colors hover:bg-[#e69500]"
           >
             Get Started

@@ -34,7 +34,7 @@ export function HeroSection() {
           </p>
           <div className="animate-fade-up delay-200 flex flex-col items-center justify-center gap-4 pt-4 sm:flex-row">
             <a
-              href="https://bodyfusion.app/#/coach/coachSignUpWebRoute"
+              href="https://coach.bodyfusion.app/#/coach/coachSignUpWebRoute"
               className="rounded-full bg-[#FFA500] px-8 py-4 text-base font-bold text-slate-950 shadow-xl shadow-[#FFA500]/25 transition-transform hover:scale-105 hover:bg-[#e69500]"
             >
               Start Free Plan
